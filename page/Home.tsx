@@ -26,7 +26,12 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
-      <Text className="text-2xl text-purple-500 dark:text-white">{title}</Text>
+      <Text
+        className="text-2xl text-purple-500 dark:text-white"
+        // eslint-disable-next-line react-native/no-inline-styles
+        style={{fontWeight: '900'}}>
+        {title}
+      </Text>
       <Text
         style={[
           styles.sectionDescription,
