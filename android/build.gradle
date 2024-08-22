@@ -8,8 +8,15 @@ buildscript {
         kotlinVersion = "1.8.0"
     }
     repositories {
-        google()
-        mavenCentral()
+           google()
+         maven {
+      url 'https://maven.aliyun.com/repository/public/'
+    }
+    maven {
+      url 'https://maven.aliyun.com/repository/central'
+    }
+    mavenLocal()
+    mavenCentral()
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
